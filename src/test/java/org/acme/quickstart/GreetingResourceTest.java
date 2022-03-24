@@ -13,6 +13,7 @@ public class GreetingResourceTest {
 
     @Test
     public void testHelloEndpoint() {
+        //add test
         String uuid = UUID.randomUUID().toString();
         given()
                 .pathParam("name",uuid)
@@ -21,5 +22,4 @@ public class GreetingResourceTest {
              .statusCode(200)
              .body(startsWith("hello "+ uuid));
     }
-
 }
